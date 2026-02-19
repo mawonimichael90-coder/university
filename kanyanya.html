@@ -1,0 +1,2967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St Peter's University – Luwero & Kanyanya Campuses</title>
+    <meta name="description" content="St Peter's University official website – admissions, notices, gallery, contact for Luwero main campus and Kanyanya Kampala liaison office.">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Google Fonts – Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --gold: #FFD700;
+            --gold-dark: #e6c200;
+            --dark: #0f0f0f;
+            --gray: #444;
+            --light: #f8f9fa;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            --black: #000000;
+            --dark-blue: #1a237e;
+            --dark-blue-hover: #0d1757;
+            --image-overlay: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            color: var(--dark);
+            line-height: 1.65;
+            background: white;
+            margin: 0;
+        }
+        
+        /* Top Black Navigation Bar */
+        .top-nav {
+            background: var(--black);
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+        
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-right: 1rem;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .top-nav a:hover {
+            color: var(--gold);
+        }
+        
+        .top-nav .social-link {
+            margin-right: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        .top-nav .right-link {
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .top-nav .apply-now {
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-left: 1.5rem;
+        }
+        
+        .top-nav .apply-now:hover {
+            background: var(--gold-dark);
+            color: var(--black);
+        }
+        
+        .top-nav .divider {
+            color: rgba(255,255,255,0.3);
+            margin: 0 0.5rem;
+        }
+        
+        /* Contact Bar Styles */
+        .contact-bar {
+            background: var(--light);
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.96rem;
+            padding: 0.6rem 0;
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            background: white !important;
+            position: sticky;
+            top: 40px;
+            z-index: 1020;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--dark) !important;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand img {
+            max-height: 55px;
+            width: auto;
+            object-fit: contain;
+            margin-right: 12px;
+            border-radius: 8px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--gray) !important;
+            transition: color 0.25s;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold) !important;
+        }
+        
+        /* Search Bar Styles */
+        .search-container {
+            position: relative;
+            margin-left: 1rem;
+        }
+        
+        .search-form {
+            display: flex;
+            align-items: center;
+            background: var(--light);
+            border-radius: 50px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .search-form:focus-within {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(255,215,0,0.1);
+            background: white;
+        }
+        
+        .search-input {
+            border: none;
+            background: transparent;
+            padding: 0.5rem 1rem;
+            width: 200px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        
+        .search-input:focus {
+            box-shadow: none;
+        }
+        
+        .search-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 1rem;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .search-btn:hover {
+            color: var(--gold);
+        }
+        
+        /* Search Results Modal */
+        .search-modal {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 400px;
+            max-height: 500px;
+            overflow-y: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-top: 1rem;
+            z-index: 1050;
+            display: none;
+        }
+        
+        .search-modal.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .search-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            font-weight: 600;
+            background: var(--light);
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .search-results-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-result-item:hover {
+            background: rgba(255,215,0,0.05);
+        }
+        
+        .search-result-item a {
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+        }
+        
+        .search-result-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--dark);
+        }
+        
+        .search-result-category {
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .search-result-snippet {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+        
+        .no-results {
+            padding: 2rem;
+            text-align: center;
+            color: var(--gray);
+        }
+        
+        .search-highlight {
+            background-color: rgba(255,215,0,0.3);
+            font-weight: 600;
+        }
+        
+        /* Button Styles - Updated to Dark Blue */
+        .btn-gold {
+            background-color: var(--dark-blue);
+            border-color: var(--dark-blue);
+            color: white;
+            font-weight: 600;
+            padding: 0.65rem 1.8rem;
+            transition: all 0.28s;
+        }
+        
+        .btn-gold:hover {
+            background-color: var(--dark-blue-hover);
+            border-color: var(--dark-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(26,35,126,0.25);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--dark-blue);
+            border-color: var(--dark-blue);
+            color: white;
+            font-weight: 600;
+            transition: all 0.28s;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: var(--dark-blue-hover);
+            border-color: var(--dark-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(26,35,126,0.25);
+            color: white;
+        }
+        
+        /* WhatsApp Floating Button - Keep original green */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-dark);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37,211,102,0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0);
+            }
+        }
+        
+        /* WhatsApp Tooltip */
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background-color: var(--dark);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1099;
+            animation: slideIn 0.5s;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 30px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: var(--dark) transparent transparent transparent;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+            scroll-margin-top: 120px;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 90px;
+            height: 5px;
+            background: var(--gold);
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        /* Card Styles */
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transition: all 0.32s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+        }
+        
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            background: rgba(255,215,0,0.09);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.6rem;
+        }
+        
+        /* Carousel Styles */
+        .carousel-item {
+            height: 70vh;
+            position: relative;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.85);
+        }
+        
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+        }
+        
+        .carousel-caption {
+            background: rgba(0,0,0,0.65);
+            border-radius: 20px;
+            padding: 2rem 3rem;
+            bottom: 15%;
+            max-width: 800px;
+            margin: 0 auto;
+            left: 10%;
+            right: 10%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,215,0,0.2);
+            z-index: 10;
+        }
+        
+        .carousel-caption h1 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .graduation-badge {
+            background: var(--gold);
+            color: black;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(255,215,0,0.3);
+        }
+        
+        /* Faculty Section Styles */
+        .faculty-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255,215,0,0.2);
+        }
+        
+        .faculty-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .faculty-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'object-fit: cover;';
+        }
+        
+        /* Special styling for local images */
+        .faculty-img img[src*="C:\\Users"] {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Specific styling for health science image */
+        .faculty-img img[alt="Health science"] {
+            object-position: center 30%;
+        }
+        
+        /* Specific styling for fashion and design image */
+        .faculty-img img[alt="Fashion and design"] {
+            object-position: center 20%;
+        }
+        
+        /* Specific styling for electrical engineering */
+        .faculty-img img[alt="Electrical Engineering"] {
+            object-position: center 40%;
+        }
+        
+        .faculty-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.2));
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .faculty-card:hover .faculty-img img {
+            transform: scale(1.1);
+        }
+        
+        .faculty-content {
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faculty-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -35px auto 1rem;
+            font-size: 2rem;
+            color: var(--gold);
+            position: relative;
+            z-index: 5;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faculty-content h4 {
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .faculty-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        
+        .faculty-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: black;
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            align-self: center;
+            box-shadow: 0 2px 5px rgba(255,215,0,0.3);
+        }
+        
+        /* Footer Styles - Updated to Dark Blue */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 5rem 0 3rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 2.2rem;
+            margin: 0 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .social-icons a:hover {
+            color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        /* Video Embed Styles */
+        .video-embed {
+            aspect-ratio: 16/9;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        
+        .tiktok-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #000000, #1a1a1a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .tiktok-placeholder:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.02);
+        }
+        
+        .tiktok-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Admission Form Styles */
+        .admission-form {
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            padding: 3.5rem;
+            margin-top: 3rem;
+        }
+        
+        .form-label {
+            font-weight: 500;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control, .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 0.25rem rgba(255,215,0,0.25);
+        }
+        
+        /* Program Card Styles */
+        .program-card {
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            padding: 1.2rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .program-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255,215,0,0.15);
+        }
+        
+        .program-card.selected {
+            border-color: var(--gold);
+            background: rgba(255,215,0,0.05);
+        }
+        
+        .program-card h5 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .program-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        /* Leadership Card Styles */
+        .leader-card {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255,215,0,0.2);
+        }
+        
+        .leader-icon {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.8rem;
+            font-size: 3.5rem;
+            color: var(--gold);
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .leader-name {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .leader-title {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .leader-dept {
+            color: var(--gray);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .leader-quote {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 2px solid #e9ecef;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* Live Badge */
+        .live-badge {
+            background: #dc3545;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 50px;
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+        }
+        
+        /* FAQ Accordion Styles */
+        .accordion-item {
+            border-radius: 15px !important;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(255,215,0,0.1);
+            color: var(--dark);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255,215,0,0.25);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+        }
+        
+        /* Event Card Styles */
+        .event-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 20px !important;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.15) !important;
+        }
+        
+        .event-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .bg-purple {
+            background: #6f42c1;
+        }
+        
+        /* Gallery Image Styles */
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.5s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .search-input {
+                width: 150px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            section {
+                padding: 4.5rem 0;
+            }
+            .carousel-item {
+                height: 55vh;
+            }
+            .section-title {
+                font-size: 2.1rem;
+            }
+            .navbar-brand img {
+                max-height: 45px;
+            }
+            .admission-form {
+                padding: 2rem;
+            }
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-tooltip {
+                bottom: 90px;
+                right: 20px;
+                font-size: 0.8rem;
+                padding: 8px 16px;
+            }
+            .top-nav .right-link {
+                margin-left: 1rem;
+                font-size: 0.8rem;
+            }
+            .top-nav .apply-now {
+                padding: 0.2rem 0.8rem;
+                margin-left: 0.8rem;
+            }
+            .carousel-caption {
+                padding: 1.5rem;
+                bottom: 10%;
+            }
+            .search-container {
+                margin-left: 0;
+                margin-top: 1rem;
+                width: 100%;
+            }
+            .search-form {
+                width: 100%;
+            }
+            .search-input {
+                width: 100%;
+            }
+            .search-modal {
+                width: 100%;
+                right: auto;
+                left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-nav .container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .top-nav .social-links {
+                margin-bottom: 0.3rem;
+            }
+            .faculty-img {
+                height: 200px;
+            }
+            .leader-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+            .leader-name {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .carousel-caption h1 {
+                font-size: 1.8rem;
+            }
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            .navbar-brand img {
+                max-height: 35px;
+            }
+            .social-icons a {
+                font-size: 1.8rem;
+                margin: 0 12px;
+            }
+            .admission-form {
+                padding: 1.5rem;
+            }
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .whatsapp-tooltip {
+                bottom: 80px;
+                right: 15px;
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+            .carousel-caption {
+                padding: 1rem;
+                left: 5%;
+                right: 5%;
+            }
+            .graduation-badge {
+                padding: 0.3rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Loading animation for images */
+        .faculty-img {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .faculty-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+            z-index: 2;
+        }
+        
+        .faculty-card:hover .faculty-img::before {
+            left: 100%;
+        }
+        
+        /* Error fallback for local images */
+        .faculty-img img[src*="C:\\Users"] {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .faculty-img.error {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .faculty-img.error i {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Black Navigation Bar -->
+    <div class="top-nav">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <!-- Left side - Social Media Handles -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/p/St-Peters-University-Uganda-100095275381153" target="_blank" class="social-link" title="Facebook">
+                    <i class="bi bi-facebook me-1"></i> Facebook
+                </a>
+                <a href="https://www.tiktok.com/@spu.tv" target="_blank" class="social-link" title="TikTok">
+                    <i class="bi bi-tiktok me-1"></i> TikTok
+                </a>
+                <a href="https://www.youtube.com/channel/UC9QFg5DzgLjSNUXPEbKQZUA" target="_blank" class="social-link" title="YouTube">
+                    <i class="bi bi-youtube me-1"></i> YouTube
+                </a>
+                <a href="https://wa.me/256704343621" target="_blank" class="social-link" title="WhatsApp">
+                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                </a>
+                <a href="https://twitter.com/stpetersuni" target="_blank" class="social-link" title="Twitter/X">
+                    <i class="bi bi-twitter-x me-1"></i> X
+                </a>
+            </div>
+
+            <!-- Right side - E-Learning, FAQs, Events, Apply Now -->
+            <div class="right-links">
+                <a href="https://elearning.spu.ac.ug" target="_blank" class="right-link" title="E-Learning Portal">
+                    <i class="bi bi-laptop me-1"></i> E-Learning
+                </a>
+                <span class="divider">|</span>
+                <a href="#faqs" class="right-link" title="Frequently Asked Questions">
+                    <i class="bi bi-question-circle me-1"></i> FAQs
+                </a>
+                <span class="divider">|</span>
+                <a href="#events" class="right-link" title="University Events">
+                    <i class="bi bi-calendar-event me-1"></i> Events
+                </a>
+                <span class="divider">|</span>
+                <a href="#admission-form" class="apply-now" title="Apply Now">
+                    <i class="bi bi-pencil-square me-1"></i> Apply Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256704343621?text=Hello%20St%20Peter's%20University%2C%20I%20would%20like%20to%20inquire%20about%20admissions%20and%20programs."
+       class="whatsapp-float"
+       target="_blank"
+       title="Chat with us on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- WhatsApp Tooltip -->
+    <div class="whatsapp-tooltip" id="whatsappTooltip">
+        <i class="bi bi-chat-dots-fill me-2"></i> Chat with us on WhatsApp!
+    </div>
+
+    <!-- Top Contact Strip -->
+    <div class="contact-bar">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <span><i class="bi bi-telephone-fill me-2"></i> 0414 660 676</span>
+            <span><i class="bi bi-envelope-fill me-2"></i> info@spu.ac.ug</span>
+            <span>
+                <i class="bi bi-whatsapp me-2"></i>
+                <a href="https://wa.me/256704343621" target="_blank" style="color: var(--dark); text-decoration: none;">0704 343 621 (WhatsApp)</a>
+            </span>
+            <span><i class="bi bi-geo-alt-fill me-2"></i> Luwero – Ndejje school zone</span>
+        </div>
+    </div>
+
+    <!-- Navigation - Restructured to 6 main pages with Search Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpeg" alt="St Peter's University Logo" onerror="this.src='https://via.placeholder.com/55x55?text=SPU'">
+                St Peter's University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-form">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search programs, events, FAQs..." autocomplete="off">
+                        <button class="search-btn" type="button" id="searchButton">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Search Results Modal -->
+                    <div class="search-modal" id="searchModal">
+                        <div class="search-header">
+                            <i class="bi bi-search me-2"></i>Search Results
+                        </div>
+                        <div class="search-results" id="searchResults">
+                            <div class="no-results">
+                                <i class="bi bi-binoculars fs-1 d-block mb-3"></i>
+                                <p>Type something to search...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section - Contains Hero Carousel and Highlights -->
+        <section id="home">
+            <!-- Hero Carousel with Graduation Theme First -->
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+                <div class="carousel-inner">
+                    <!-- Graduation Slide 1 - Active -->
+                    <div class="carousel-item active">
+                        <img src="https://thumbs.dreamstime.com/b/group-multietnic-students-celebrating-their-graduation-throwing-caps-air-closeup-education-qualification-gown-114061638.jpg" class="d-block w-100" alt="Graduation ceremony - Students throwing caps">
+                        <div class="carousel-caption">
+                            <span class="graduation-badge">🎓 4TH GRADUATION CEREMONY 2026</span>
+                            <h1 class="display-3 fw-bold">Celebrating Excellence</h1>
+                            <p class="lead fs-3 mb-4">Join us as we honor our newest graduates from Luwero & Kanyanya Campuses</p>
+                            <a href="#media" class="btn btn-gold btn-lg px-5 py-3">View Graduation Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Graduation Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="https://thumbs.dreamstime.com/b/students-throwing-graduation-hats-air-celebrating-55879721.jpg" class="d-block w-100" alt="Graduates in caps and gowns">
+                        <div class="carousel-caption">
+                            <span class="graduation-badge">🎓 CONGRATULATIONS CLASS OF 2022/2023</span>
+                            <h1 class="display-3 fw-bold">Your Future Begins Here</h1>
+                            <p class="lead fs-3 mb-4">Over 500 students graduated across various disciplines</p>
+                            <a href="#media" class="btn btn-gold btn-lg px-5 py-3">View Graduation Photos</a>
+                        </div>
+                    </div>
+
+                    <!-- Graduation Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="https://media.gettyimages.com/id/1066324992/photo/graduation-day.jpg?s=1024x1024&w=gi&k=20&c=4QwaiND8L14r90sZinVsFWrpnAlqusqSiVN5EMYLTH4=" class="d-block w-100" alt="Graduates celebrating">
+                        <div class="carousel-caption">
+                            <span class="graduation-badge">🎓 SAVE THE DATE</span>
+                            <h1 class="display-3 fw-bold">Fourth Graduation Ceremony</h1>
+                            <p class="lead fs-3 mb-4">March 15, 2026 • Luwero Main Campus</p>
+                            <a href="#contact" class="btn btn-gold btn-lg px-5 py-3">RSVP Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Original Slide 1 -->
+                    <div class="carousel-item">
+                        <img src="https://spu.ac.ug/wp-content/uploads/2024/08/St-Peters-University-Building.jpg" class="d-block w-100" alt="University Main Building – Luwero">
+                        <div class="carousel-caption">
+                            <h1 class="display-3 fw-bold">Innovate Your Future</h1>
+                            <p class="lead fs-3 mb-4">Unlock the potential of your education at St Peter's University</p>
+                            <a href="#admission-form" class="btn btn-gold btn-lg px-5 py-3">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Original Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="C:\Users\MICHEAL\Desktop\web\IMG-20250813-WA0011.jpg" class="d-block w-100" alt="Kanyanya Campus – Kampala Liaison Office" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?w=800'">
+                        <div class="carousel-caption">
+                            <h1 class="display-3 fw-bold">Kanyanya Campus</h1>
+                            <p class="lead fs-3 mb-4">Urban access – Gayaza Road, approx. 4 miles from Kampala city centre Behind Gaz fuel</p>
+                            <a href="#contact" class="btn btn-gold btn-lg px-5 py-3">Visit Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Original Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="C:\Users\MICHEAL\Desktop\web\students.jpg" alt="Students" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800'">
+                        <div class="carousel-caption">
+                            <h1 class="display-3 fw-bold">Welcome to SPU</h1>
+                            <p class="lead fs-3 mb-4">Luwero Main Campus • Kanyanya Kampala Liaison</p>
+                            <a href="#contact" class="btn btn-gold btn-lg px-5 py-3">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Graduation 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Graduation 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Graduation 3"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Main Campus"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Kanyanya Campus"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Students"></button>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Four Highlight Cards -->
+            <div class="bg-light">
+                <div class="container">
+                    <div class="row g-4 text-center">
+                        <div class="col-md-3">
+                            <div class="card h-100 p-4">
+                                <div class="icon-circle"><i class="bi bi-book fs-1 text-warning"></i></div>
+                                <h5>Quality Education</h5>
+                                <p>Accredited programs in health, education, business, IT & engineering</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100 p-4">
+                                <div class="icon-circle"><i class="bi bi-building fs-1 text-warning"></i></div>
+                                <h5>Modern Facilities</h5>
+                                <p>Conducive learning and living environment on both campuses</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100 p-4">
+                                <div class="icon-circle"><i class="bi bi-lightbulb fs-1 text-warning"></i></div>
+                                <h5>Innovation & Research</h5>
+                                <p>Encouraging creativity and problem-solving skills</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card h-100 p-4">
+                                <div class="icon-circle"><i class="bi bi-people fs-1 text-warning"></i></div>
+                                <h5>Inclusive Community</h5>
+                                <p>Diverse, supportive and student-centered culture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section - Contains About, Leadership, Faculties -->
+        <section id="about-us" class="bg-white">
+            <div class="container">
+                <h2 class="section-title">About St Peter's University</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <p class="lead mb-4">Founded in 2021 • NCHE accredited • Two strategic campuses</p>
+                        <p class="fs-5">
+                            St Peter's University started as St. Peters Tertiary Education Institute offering certificates and diplomas.
+                            It has since transformed into a full university committed to excellence, innovation and inclusivity.
+                        </p>
+                        <div class="row mt-5 g-4">
+                            <div class="col-md-6">
+                                <h4>Luwero Main Campus</h4>
+                                <p>Serene learning environment in Ndejje school zone, Kisooba village – perfect for focused academic growth.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Kanyanya Campus</h4>
+                                <p>Urban access along Gayaza Road, approximately 4 miles from Kampala city centre – convenient for city residents.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Distinguished Faculties Section -->
+            <div class="container mt-5">
+                <h2 class="section-title">Our Distinguished Faculties</h2>
+                <p class="text-center lead mb-5">Explore our academic and vocational programs designed for excellence</p>
+
+                <div class="row g-4">
+                    <!-- Faculty of Business -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Faculty of Business">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-graph-up"></i>
+                                </div>
+                                <h4>Faculty of Business</h4>
+                                <p>Bachelor of Business Administration • Diploma in Business Studies • Certificate in Entrepreneurship</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of Education -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Faculty of Education">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <h4>Faculty of Education</h4>
+                                <p>Bachelor of Education • Diploma in Primary Education • Certificate in Early Childhood Development</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of Information Technology -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Faculty of IT">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <h4>Faculty of Information Technology</h4>
+                                <p>Bachelor of IT • Diploma in Computer Science • Certificate in Web Development</p>
+                                <span class="faculty-tag">Kanyanya Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of Health Sciences - Styled perfectly -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="C:\Users\MICHEAL\Desktop\web\health science.jpg" 
+                                     alt="Health science" 
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'bi bi-heart-pulse\' style=\'font-size: 4rem; color: white;\'></i>'; this.parentElement.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)';">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-heart-pulse"></i>
+                                </div>
+                                <h4>Faculty of Health Sciences</h4>
+                                <p>Diploma in Nursing • Certificate in Health Assistance • Community Health</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Studies - Automotive -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Automotive Engineering">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-tools"></i>
+                                </div>
+                                <h4>Vocational: Automotive</h4>
+                                <p>Certificate in Automotive Engineering • Motor Vehicle Mechanics • Auto Electrical Systems</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Studies - Electrical -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="C:\Users\MICHEAL\Desktop\web\electical engineering.jpg" 
+                                     alt="Electrical Engineering"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'bi bi-lightning\' style=\'font-size: 4rem; color: white;\'></i>'; this.parentElement.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)';">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-lightning"></i>
+                                </div>
+                                <h4>Vocational: Electrical</h4>
+                                <p>Certificate in Electrical Installation • Solar Technology • Electronics Repair</p>
+                                <span class="faculty-tag">Kanyanya Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Studies - Building & Construction -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Building & Construction">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-bricks"></i>
+                                </div>
+                                <h4>Vocational: Building & Construction</h4>
+                                <p>Certificate in Bricklaying • Plumbing • Painting & Decoration</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Studies - Fashion & Design -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="C:\Users\MICHEAL\Desktop\web\fashion and design.jpg" 
+                                     alt="Fashion and design"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'bi bi-scissors\' style=\'font-size: 4rem; color: white;\'></i>'; this.parentElement.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)';">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-scissors"></i>
+                                </div>
+                                <h4>Vocational: Fashion & Design</h4>
+                                <p>Certificate in Tailoring • Fashion Design • Textile Technology</p>
+                                <span class="faculty-tag">Kanyanya Campus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vocational Studies - Catering & Hospitality -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="faculty-card">
+                            <div class="faculty-img">
+                                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Catering & Hospitality">
+                            </div>
+                            <div class="faculty-content">
+                                <div class="faculty-icon">
+                                    <i class="bi bi-cup-hot"></i>
+                                </div>
+                                <h4>Vocational: Catering & Hospitality</h4>
+                                <p>Certificate in Food Preparation • Hospitality Management • Baking</p>
+                                <span class="faculty-tag">Luwero Campus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View All Programs Button -->
+                <div class="text-center mt-5">
+                    <a href="#admission-form" class="btn btn-gold btn-lg px-5 py-3">View All Programs & Apply</a>
+                </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div class="container mt-5">
+                <h2 class="section-title">University Leadership</h2>
+                <p class="text-center lead mb-5">Meet the dedicated leaders guiding St Peter's University towards excellence</p>
+
+                <div class="row g-4">
+                    <!-- Chancellor -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <h3 class="leader-name">Rt. Rev. Dr. Johnson Twinomujuni</h3>
+                            <div class="leader-title">Chancellor</div>
+                            <div class="leader-dept">St Peter's University</div>
+                            <div class="leader-quote">
+                                "Providing quality education that transforms lives and communities."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vice Chancellor -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-person-vcard"></i>
+                            </div>
+                            <h3 class="leader-name">Dr. Dorothy Businge Kakongoro Kabugo</h3>
+                            <div class="leader-title">Vice Chancellor</div>
+                            <div class="leader-dept">Office of the Vice Chancellor</div>
+                            <div class="leader-quote">
+                                "Appointed to lead with vision, integrity and a commitment to academic excellence."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deputy Vice Chancellor -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-person-workspace"></i>
+                            </div>
+                            <h3 class="leader-name">Prof. Sarah N. Kyomuhendo</h3>
+                            <div class="leader-title">Deputy Vice Chancellor</div>
+                            <div class="leader-dept">Academic Affairs</div>
+                            <div class="leader-quote">
+                                "Fostering a dynamic learning environment that nurtures critical thinking and creativity."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- University Secretary -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-file-person"></i>
+                            </div>
+                            <h3 class="leader-name">Mr. Lukwago Ismail</h3>
+                            <div class="leader-title">University Secretary</div>
+                            <div class="leader-dept">Administration</div>
+                            <div class="leader-quote">
+                                "Ensuring efficient and effective administrative services for university operations."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dean of Students -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h3 class="leader-name">Lukundo</h3>
+                            <div class="leader-title">Dean of Students</div>
+                            <div class="leader-dept">Student Affairs</div>
+                            <div class="leader-quote">
+                                "Creating a supportive and inclusive community where every student can thrive."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- University Librarian -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-journal-bookmark-fill"></i>
+                            </div>
+                            <h3 class="leader-name">Mr. David K. Ssemakula</h3>
+                            <div class="leader-title">University Librarian</div>
+                            <div class="leader-dept">Library Services</div>
+                            <div class="leader-quote">
+                                "Empowering learning and research through access to world-class information resources."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of Business Dean -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h3 class="leader-name">Dr. Peter K. Mwanga</h3>
+                            <div class="leader-title">Dean</div>
+                            <div class="leader-dept">Faculty of Business Administration</div>
+                            <div class="leader-quote">
+                                "Preparing future business leaders with practical skills and ethical values."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of Education Dean -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h3 class="leader-name">Mr. Okeke Michael</h3>
+                            <div class="leader-title">Dean</div>
+                            <div class="leader-dept">Faculty of Education</div>
+                            <div class="leader-quote">
+                                "Shaping the next generation of educators who will transform Uganda's education sector."
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Faculty of IT Dean -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="leader-card">
+                            <div class="leader-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="leader-name">Prof. Robert M. Tumwebaze</h3>
+                            <div class="leader-title">Dean</div>
+                            <div class="leader-dept">Faculty of Information Technology</div>
+                            <div class="leader-quote">
+                                "Driving digital innovation and technological advancement in Uganda and beyond."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- University Council -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="leader-card p-5">
+                            <h3 class="fw-bold mb-4">University Council Members</h3>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Mr. James K. Mugisha - Chairperson</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Hon. Lydia K. Amito - Member</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Prof. Richard O. Okumu - Member</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Dr. Margaret N. Kato - Member</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Mr. John B. Ssekandi - Member</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="mb-1"><i class="bi bi-dot text-warning"></i> Ms. Sarah A. Achola - Member</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section - Contains Admissions and Notices -->
+        <section id="services" class="bg-light">
+            <!-- Admissions -->
+            <div class="container">
+                <h2 class="section-title">Admissions</h2>
+                <p class="text-center lead mb-5">We welcome students through multiple entry schemes</p>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 text-center">
+                            <h4>Direct Entry</h4>
+                            <p class="mt-3">UCE ≥ 5 passes<br>UACE ≥ 2 principal passes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 text-center">
+                            <h4>Diploma Holders</h4>
+                            <p class="mt-3">Relevant credit/second-class diploma + mature entry exam (≥50%)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 text-center">
+                            <h4>Mature Age</h4>
+                            <p class="mt-3">≥ 25 years + pass NCHE Mature Age Examination</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-5">
+                    <a href="#admission-form" class="btn btn-gold btn-lg px-5 py-3">Apply Now</a>
+                    <a href="https://wa.me/256704343621?text=Hello%20St%20Peter's%20University%2C%20I%20would%20like%20to%20inquire%20about%20admissions%20requirements%20and%20programs."
+                       class="btn btn-whatsapp btn-lg px-5 py-3 ms-3"
+                       target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Admission Form Section -->
+                <div id="admission-form" class="admission-form">
+                    <h3 class="text-center mb-4">Online Application Form</h3>
+                    <p class="text-center text-muted mb-5">Fill in your details to begin your journey at St Peter's University</p>
+
+                    <form>
+                        <div class="row g-4">
+                            <!-- Personal Information -->
+                            <div class="col-12">
+                                <h5 class="fw-bold mb-3">Personal Information</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Date of Birth *</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Gender *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Nationality *</label>
+                                <input type="text" class="form-control" placeholder="Enter your nationality" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" placeholder="your.email@example.com" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" placeholder="+256 XXX XXX XXX" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Home Address *</label>
+                                <textarea class="form-control" rows="2" placeholder="Enter your full address" required></textarea>
+                            </div>
+
+                            <!-- Academic Information -->
+                            <div class="col-12 mt-4">
+                                <h5 class="fw-bold mb-3">Academic Information</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Highest Qualification *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select qualification</option>
+                                    <option value="uce">UCE (O-Level)</option>
+                                    <option value="uace">UACE (A-Level)</option>
+                                    <option value="diploma">Diploma</option>
+                                    <option value="degree">Bachelor's Degree</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Year of Completion *</label>
+                                <input type="number" class="form-control" placeholder="e.g., 2024" min="2000" max="2026" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Institution Name *</label>
+                                <input type="text" class="form-control" placeholder="Name of previous school/institution" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Index Number (if applicable)</label>
+                                <input type="text" class="form-control" placeholder="e.g., UACE/UCE index number">
+                            </div>
+
+                            <!-- Program Selection -->
+                            <div class="col-12 mt-4">
+                                <h5 class="fw-bold mb-3">Select Your Program *</h5>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Bachelor of Business Administration</h5>
+                                    <p>3 years • Luwero Campus</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Bachelor of Education</h5>
+                                    <p>3 years • Luwero Campus</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Bachelor of Information Technology</h5>
+                                    <p>3 years • Kanyanya Campus</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Diploma in Nursing</h5>
+                                    <p>2 years • Luwero Campus</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Certificate in Computer Science</h5>
+                                    <p>1 year • Kanyanya Campus</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="program-card">
+                                    <h5>Diploma in Business Studies</h5>
+                                    <p>2 years • Both Campuses</p>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="col-12 mt-4">
+                                <h5 class="fw-bold mb-3">Additional Information</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">How did you hear about us? *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select an option</option>
+                                    <option value="website">University Website</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="friend">Friend/Family</option>
+                                    <option value="school">School Career Day</option>
+                                    <option value="newspaper">Newspaper</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Preferred Campus *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select campus</option>
+                                    <option value="luwero">Luwero Main Campus</option>
+                                    <option value="kanyanya">Kanyanya Campus</option>
+                                    <option value="both">No preference</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Additional Notes (Optional)</label>
+                                <textarea class="form-control" rows="3" placeholder="Any additional information you'd like to share..."></textarea>
+                            </div>
+
+                            <!-- Documents Upload -->
+                            <div class="col-12 mt-4">
+                                <h5 class="fw-bold mb-3">Required Documents</h5>
+                                <p class="text-muted small mb-3">Please upload scanned copies of your academic documents (PDF or Image files, max 5MB each)</p>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Academic Certificates/Transcripts *</label>
+                                <input type="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Birth Certificate/ID *</label>
+                                <input type="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Passport Photo *</label>
+                                <input type="file" class="form-control" accept=".jpg,.jpeg,.png" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Other Supporting Documents</label>
+                                <input type="file" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                            </div>
+
+                            <!-- Terms and Submit -->
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I confirm that the information provided is accurate and complete. I understand that any false information may lead to disqualification. *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-5">
+                                <button type="submit" class="btn btn-gold btn-lg px-5 py-3">Submit Application</button>
+                                <p class="text-muted small mt-3">You will receive a confirmation email with further instructions</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Notices -->
+            <div class="container mt-5">
+                <h2 class="section-title">Latest Notices</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <h5>Registration – Continuing Students</h5>
+                            <p class="text-muted mt-2">Posted: March 15, 2026</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <h5>Tuition Payment Deadline – Semester I</h5>
+                            <p class="text-muted mt-2">Posted: March 15, 2026</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4">
+                            <h5>Admission Letters 2024/2026</h5>
+                            <p class="text-muted mt-2">Posted: August 5, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section id="faqs" class="bg-white">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="text-center lead mb-5">Find answers to common questions about St Peter's University</p>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion" id="faqAccordion">
+                            <!-- FAQ 1 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <span class="fw-bold text-dark">What programs does St. Peter's University offer?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        St. Peter's University offers a wide range of undergraduate, graduate, and certificate programs across various disciplines including:
+                                        <ul class="mt-3 mb-0">
+                                            <li>Faculty of Business (BBA, Diploma in Business Studies, Certificate in Entrepreneurship)</li>
+                                            <li>Faculty of Education (Bachelor of Education, Diploma in Primary Education, Certificate in Early Childhood Development)</li>
+                                            <li>Faculty of Information Technology (Bachelor of IT, Diploma in Computer Science, Certificate in Web Development)</li>
+                                            <li>Faculty of Health Sciences (Diploma in Nursing, Certificate in Health Assistance, Community Health)</li>
+                                            <li>Vocational Studies (Automotive, Electrical, Building & Construction, Fashion & Design, Catering & Hospitality)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 2 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="fw-bold text-dark">How can I apply for admission?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        You can apply for admission online through our official website. Visit the <a href="#admission-form" class="text-decoration-none text-warning">Admissions section</a> above to find detailed instructions on the application process, required documents, and deadlines. Alternatively, you can contact our admissions office at <strong>admissions@spu.ac.ug</strong> or call <strong>0704 343 621</strong> for assistance.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="fw-bold text-dark">Where are the university campuses located?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        SPU has two strategic campuses:
+                                        <ul class="mt-3">
+                                            <li><strong>Luwero Main Campus:</strong> Located in the Ndejje school zone, Kisooba village - serene learning environment perfect for focused academic growth.</li>
+                                            <li><strong>Kanyanya Campus:</strong> Situated about 4 miles from Kampala city centre along Gayaza Road (Behind Gaz fuel) - urban access for city residents.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 4 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <span class="fw-bold text-dark">How do I contact St. Peter's University for more information?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        You can contact the university through:
+                                        <ul class="mt-3">
+                                            <li><strong>Phone:</strong> 0414 660 676, 0704 343 621, 0781 540 122</li>
+                                            <li><strong>Email:</strong> info@spu.ac.ug (general inquiries) or admissions@spu.ac.ug (admission questions)</li>
+                                            <li><strong>WhatsApp:</strong> <a href="https://wa.me/256704343621" target="_blank" class="text-decoration-none text-warning">0704 343 621</a></li>
+                                            <li><strong>Visit us:</strong> P.O. Box 16301, Kampala, Uganda</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 5 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <span class="fw-bold text-dark">What ICT services are available to students and staff?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        SPU provides comprehensive ICT services including:
+                                        <ul class="mt-3">
+                                            <li>Email management and communication tools</li>
+                                            <li>Hardware and software support</li>
+                                            <li>Campus-wide network and Wi-Fi access</li>
+                                            <li>IT security and data protection</li>
+                                            <li>E-Learning portal access at <a href="https://elearning.spu.ac.ug" target="_blank" class="text-decoration-none text-warning">elearning.spu.ac.ug</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 6 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <span class="fw-bold text-dark">How long do programs at SPU take to complete?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        Program durations vary by level:
+                                        <ul class="mt-3">
+                                            <li><strong>Bachelor's degrees:</strong> Typically 3-4 years</li>
+                                            <li><strong>Diploma programs:</strong> 2 years</li>
+                                            <li><strong>Certificate programs:</strong> 1 year</li>
+                                            <li><strong>Vocational courses:</strong> 6 months - 1 year</li>
+                                        </ul>
+                                        Specific durations are detailed in the program descriptions on our website.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 7 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        <span class="fw-bold text-dark">What student support services are available?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        SPU offers comprehensive student support services including:
+                                        <ul class="mt-3">
+                                            <li>Academic advising and mentorship</li>
+                                            <li>Career counseling and guidance</li>
+                                            <li>Mental health and wellness support</li>
+                                            <li>Disability support services</li>
+                                            <li>Student clubs and extracurricular activities</li>
+                                            <li>Library and research assistance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 8 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        <span class="fw-bold text-dark">Does the university offer internships or practical training?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        Yes. Many SPU programs include internships or practical training components to help students gain hands-on experience in their chosen fields. The Career Services Office actively assists students with internship placements and industry connections. Vocational programs particularly emphasize practical skills development through workshops and industry attachments.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 9 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        <span class="fw-bold text-dark">Does SPU have research opportunities?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        Yes. The university encourages research across all faculties with various research centres and programs. We offer:
+                                        <ul class="mt-3">
+                                            <li>Research funding and grants for eligible initiatives</li>
+                                            <li>Faculty-led research projects</li>
+                                            <li>Student research opportunities</li>
+                                            <li>Publication support in peer-reviewed journals</li>
+                                            <li>Collaborative research with international partners</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 10 -->
+                            <div class="accordion-item mb-3 border-0 shadow-sm">
+                                <h3 class="accordion-header" id="headingTen">
+                                    <button class="accordion-button collapsed bg-light rounded-3 p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        <span class="fw-bold text-dark">What support is available for international students?</span>
+                                    </button>
+                                </h3>
+                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body p-4">
+                                        SPU offers comprehensive services for international students including:
+                                        <ul class="mt-3">
+                                            <li>Orientation programs to help with cultural adjustment</li>
+                                            <li>Visa and immigration assistance</li>
+                                            <li>Accommodation support</li>
+                                            <li>Academic advising tailored to international students</li>
+                                            <li>Cultural integration activities and events</li>
+                                            <li>International student community and support networks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Still Have Questions Card -->
+                        <div class="text-center mt-5 p-5 bg-light rounded-4">
+                            <i class="bi bi-question-circle fs-1 text-warning mb-3"></i>
+                            <h4 class="fw-bold mb-3">Still Have Questions?</h4>
+                            <p class="mb-4">Can't find the answer you're looking for? Please chat with our friendly team or visit our contact page.</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="https://wa.me/256704343621" class="btn btn-whatsapp px-4 py-2" target="_blank">
+                                    <i class="bi bi-whatsapp me-2"></i>WhatsApp Us
+                                </a>
+                                <a href="#contact" class="btn btn-gold px-4 py-2">
+                                    <i class="bi bi-envelope me-2"></i>Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Events Section -->
+        <section id="events" class="bg-light">
+            <div class="container">
+                <h2 class="section-title">University Events</h2>
+                <p class="text-center lead mb-5">Stay updated with upcoming academic, cultural, and social events at St Peter's University</p>
+
+                <!-- Featured Event - Graduation Countdown -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-10">
+                        <div class="card border-0 shadow-lg overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-warning p-5 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="bi bi-mortarboard-fill text-dark" style="font-size: 4rem;"></i>
+                                    <h3 class="fw-bold text-dark mt-3">4TH GRADUATION</h3>
+                                    <div class="display-6 fw-bold text-dark" id="graduationCountdown">2026</div>
+                                    <span class="badge bg-dark text-white mt-3 px-4 py-2">Save the Date</span>
+                                </div>
+                                <div class="col-md-8 p-5">
+                                    <span class="badge bg-danger mb-3 live-badge">UPCOMING</span>
+                                    <h3 class="fw-bold mb-3">Fourth Graduation Ceremony 2026</h3>
+                                    <p class="fs-5 mb-4">Join us as we celebrate the achievements of our graduating class of 2026. This momentous occasion marks the culmination of years of hard work and dedication.</p>
+                                    <div class="row mb-4">
+                                        <div class="col-6">
+                                            <i class="bi bi-calendar-event-fill text-warning me-2"></i> March 15, 2026
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="bi bi-clock-fill text-warning me-2"></i> 9:00 AM - 5:00 PM
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <i class="bi bi-geo-alt-fill text-warning me-2"></i> Luwero Main Campus Auditorium
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <a href="#contact" class="btn btn-gold px-4 py-2">RSVP Now</a>
+                                        <a href="#media" class="btn btn-outline-dark px-4 py-2">View Past Graduations</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events Grid -->
+                <h3 class="fw-bold mb-4"><i class="bi bi-calendar-check-fill text-warning me-2"></i>Upcoming Events</h3>
+                
+                <div class="row g-4 mb-5">
+                    <!-- Event 1: Orientation Week -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800" class="card-img-top" alt="Orientation Week" style="height: 200px; object-fit: cover;">
+                                <span class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-2 m-3 rounded-pill fw-bold">NEW</span>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-primary">Orientation</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 3 days left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">Freshman Orientation Week</h4>
+                                <p class="text-muted mb-3">Welcome to the SPU family! A week-long orientation program for new students to familiarize themselves with campus life, academic expectations, and available resources.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> January 10-17, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Both Campuses</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-people-fill me-1"></i> 500+ expected</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2: Research Symposium -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" class="card-img-top" alt="Research Symposium" style="height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-info">Academic</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 2 weeks left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">Annual Research Symposium 2026</h4>
+                                <p class="text-muted mb-3">Showcasing cutting-edge research from faculty and students across all disciplines. Network with researchers and explore collaborative opportunities.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> February 5-6, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Luwero Campus - Conference Hall</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-journal-text me-1"></i> 50+ papers</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Submit Abstract</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 3: Career Fair -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800" class="card-img-top" alt="Career Fair" style="height: 200px; object-fit: cover;">
+                                <span class="position-absolute top-0 end-0 bg-success text-white px-3 py-2 m-3 rounded-pill fw-bold">HIRING</span>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-success">Career</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 1 month left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">SPU Career Fair 2026</h4>
+                                <p class="text-muted mb-3">Connect with top employers from various industries. Bring your CV and network with potential employers for internships and graduate positions.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> March 5, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Kanyanya Campus - Main Hall</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-building me-1"></i> 30+ companies</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 4: Sports Day -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800" class="card-img-top" alt="Sports Day" style="height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-danger">Sports</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 2 months left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">Inter-Campus Sports Gala</h4>
+                                <p class="text-muted mb-3">Annual sports competition between Luwero and Kanyanya campuses featuring football, basketball, athletics, and traditional games.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> April 20-22, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Luwero Sports Grounds</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-trophy me-1"></i> 8 teams</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Join Team</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 5: Open Day -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800" class="card-img-top" alt="Open Day" style="height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-warning text-dark">Admissions</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 3 months left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">University Open Day</h4>
+                                <p class="text-muted mb-3">Prospective students and parents are invited to tour our campuses, meet faculty members, and learn about our programs and admission requirements.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> May 15, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Both Campuses</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-person-plus me-1"></i> Free entry</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 6: Cultural Festival -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm event-card">
+                            <div class="position-relative">
+                                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800" class="card-img-top" alt="Cultural Festival" style="height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="badge bg-purple" style="background: #6f42c1; color: white;">Cultural</span>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i> 4 months left</small>
+                                </div>
+                                <h4 class="fw-bold mb-3">Unity Cultural Festival</h4>
+                                <p class="text-muted mb-3">Celebrate diversity with music, dance, food, and cultural displays from different regions of Uganda and beyond. A colorful event showcasing our inclusive community.</p>
+                                <div class="mb-3">
+                                    <p class="mb-1"><i class="bi bi-calendar-event text-warning me-2"></i> June 12-14, 2026</p>
+                                    <p class="mb-1"><i class="bi bi-geo-alt text-warning me-2"></i> Kanyanya Campus Grounds</p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted"><i class="bi bi-flag me-1"></i> 20+ cultures</span>
+                                    <a href="#contact" class="btn btn-sm btn-outline-warning">Participate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Events / Event Calendar -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm bg-white p-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h3 class="fw-bold mb-3"><i class="bi bi-calendar-range-fill text-warning me-2"></i>Event Calendar</h3>
+                                    <p class="lead mb-4">Download our full academic calendar and event schedule for the 2026 academic year.</p>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="btn btn-gold px-4 py-2"><i class="bi bi-download me-2"></i>Download Calendar</a>
+                                        <a href="#" class="btn btn-outline-dark px-4 py-2"><i class="bi bi-bell me-2"></i>Subscribe to Updates</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <i class="bi bi-calendar3 text-warning" style="font-size: 8rem; opacity: 0.3;"></i>
+                                </div>
+                            </div>
+
+                            <!-- Recent Events List -->
+                            <hr class="my-5">
+                            
+                            <h4 class="fw-bold mb-4"><i class="bi bi-clock-history me-2"></i>Recent Past Events</h4>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                        <div class="bg-white rounded-2 p-3 text-center me-3" style="min-width: 70px;">
+                                            <div class="fw-bold">NOV</div>
+                                            <div class="fs-4">15</div>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Alumni Homecoming 2025</h6>
+                                            <p class="text-muted small mb-0">Luwero Campus • 200+ attendees</p>
+                                        </div>
+                                        <span class="badge bg-secondary ms-auto">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                        <div class="bg-white rounded-2 p-3 text-center me-3" style="min-width: 70px;">
+                                            <div class="fw-bold">OCT</div>
+                                            <div class="fs-4">10</div>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Matriculation Ceremony</h6>
+                                            <p class="text-muted small mb-0">Both Campuses • 800+ new students</p>
+                                        </div>
+                                        <span class="badge bg-secondary ms-auto">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                        <div class="bg-white rounded-2 p-3 text-center me-3" style="min-width: 70px;">
+                                            <div class="fw-bold">SEP</div>
+                                            <div class="fs-4">5</div>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Community Service Day</h6>
+                                            <p class="text-muted small mb-0">Ndejje Community • 300+ volunteers</p>
+                                        </div>
+                                        <span class="badge bg-secondary ms-auto">Completed</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                        <div class="bg-white rounded-2 p-3 text-center me-3" style="min-width: 70px;">
+                                            <div class="fw-bold">AUG</div>
+                                            <div class="fs-4">22</div>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Innovation Hackathon</h6>
+                                            <p class="text-muted small mb-0">Kanyanya Campus • 15 teams</p>
+                                        </div>
+                                        <span class="badge bg-secondary ms-auto">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="bg-white">
+            <div class="container">
+                <h2 class="section-title">Research & Innovation</h2>
+                <p class="text-center lead mb-5">Advancing knowledge through cutting-edge research</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-flask fs-1 text-warning mb-3"></i>
+                            <h4>Research Centers</h4>
+                            <p>Our university hosts multiple research centers focused on solving local and global challenges through innovative research.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-journal-richtext fs-1 text-warning mb-3"></i>
+                            <h4>Publications</h4>
+                            <p>Faculty and students regularly publish in peer-reviewed journals, contributing to the global body of knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-trophy fs-1 text-warning mb-3"></i>
+                            <h4>Grants & Funding</h4>
+                            <p>We support research through various grants and funding opportunities for both faculty and students.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 p-4">
+                            <i class="bi bi-people-fill fs-1 text-warning mb-3"></i>
+                            <h4>Collaborations</h4>
+                            <p>We partner with international institutions to foster collaborative research and knowledge exchange.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Section - Contains Gallery, Graduation, and Videos -->
+        <section id="media" class="bg-light">
+            <!-- Gallery -->
+            <div class="container">
+                <h2 class="section-title">Campus & Life Gallery</h2>
+                <div class="row g-3 mt-4">
+                    <div class="col-md-4">
+                        <img src="https://spu.ac.ug/wp-content/uploads/2024/08/St-Peters-University-Building-768x432.jpg" class="gallery-img" alt="Main building Luwero">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="C:\Users\MICHEAL\Desktop\web\campus.jpg" class="gallery-img" alt="Campus" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800'">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://media.gettyimages.com/id/1175414396/photo/large-group-of-happy-college-students-celebrating-their-graduation-day-outdoors.jpg?s=1024x1024&w=gi&k=20&c=GKiHBaejigJkgBTPslGfp6G5v_T5CJ4uyaqNJUvx-e0=" class="gallery-img" alt="Graduation ceremony">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Graduation Ceremony -->
+            <div class="container mt-5">
+                <h2 class="section-title">Fourth Graduation Ceremony</h2>
+                <p class="text-center lead mb-5">Celebrating academic excellence and the achievements of our graduating class</p>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <p class="fs-5">
+                            Our fourth graduation ceremony was a memorable milestone for St Peter's University.
+                            Hundreds of students from both Luwero and Kanyanya campuses received their certificates, diplomas and degrees in a colorful and inspiring event.
+                        </p>
+                        <p class="mt-3">
+                            <strong>Date:</strong> March 15, 2026<br>
+                            <strong>Venue:</strong> Luwero Main Campus Auditorium<br>
+                            <strong>Keynote Speaker:</strong> Prof. John Mukibi - Minister of Education
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-md-4">
+                        <img src="https://www.shutterstock.com/shutterstock/photos/2475380851/display_1500/stock-photo-students-graduation-and-caps-in-sky-with-happiness-university-achievement-or-ceremony-or-excited-2475380851.jpg" class="gallery-img" alt="Graduation moment 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://thumbs.dreamstime.com/b/joyful-graduation-ceremony-students-celebrate-achievements-caps-tossed-high-school-college-scene-where-graduates-369113324.jpg" class="gallery-img" alt="Graduation moment 2">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://media.istockphoto.com/id/169947703/photo/excited-group-of-college-graduates-throwing-their-hats-in-celebration.jpg?s=1024x1024&w=is&k=20&c=4pyspbkqdCWGLA2b_uYCUIbA77tXhgmHYQnFHnmB0JU=" class="gallery-img" alt="Graduation moment 3">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://media.gettyimages.com/id/1398083803/video/group-happy-graduates-throw-caps.jpg?s=640x640&k=20&c=CcxjOwBapnBXxn12gE7e5ftfuXRAOlb6pnBpAQ5zTQc=" class="gallery-img" alt="Graduation moment 4">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/01/05/10/Graduation.jpg" class="gallery-img" alt="Graduation moment 5">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://c8.alamy.com/comp/DB3BHA/university-of-sheffield-students-celebrating-on-graduation-day-with-DB3BHA.jpg" class="gallery-img" alt="Graduation moment 6">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://thumbs.dreamstime.com/b/graduates-celebrating-throwing-caps-air-smiling-joyfully-outdoors-graduation-celebration-achievement-success-happiness-402136955.jpg" class="gallery-img" alt="Graduation moment 7">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://media.istockphoto.com/id/479765206/photo/happy-graduation-students-throwing-mortar-board-hats-in-the-air.jpg?s=1024x1024&w=is&k=20&c=2yJkvOlgR44ZwmvnT3_7FkGkWHYtaFJe6fzr04LsWwg=" class="gallery-img" alt="Graduation moment 8">
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#gallery" class="btn btn-outline-dark btn-lg px-5">View More Photos</a>
+                </div>
+            </div>
+
+            <!-- Video Content -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>University Introduction <span class="badge bg-danger ms-2 live-badge">LIVE</span></h6>
+                        <div class="video-embed ratio ratio-16x9 position-relative">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/qjQvPkhI1-k?autoplay=1&mute=1&loop=1&playlist=qjQvPkhI1-k&rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3&color=white" 
+                                title="St. Peter's University Introduction" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Campus Life on TikTok</h6>
+                        <div class="video-embed ratio ratio-16x9">
+                            <a href="https://www.tiktok.com/@spu.tv/video/7600769035881532692" target="_blank" class="tiktok-placeholder w-100 h-100 d-flex flex-column align-items-center justify-content-center text-white text-decoration-none">
+                                <i class="bi bi-tiktok" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                                <p class="mb-1 fw-bold">Watch on TikTok</p>
+                                <p class="small opacity-75">@spu.tv</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-light">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+
+                <div class="row mt-5 align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <h4>Main Contact Information</h4>
+                        <ul class="list-unstyled mt-4 fs-5">
+                            <li class="mb-4">
+                                <i class="bi bi-telephone-fill me-3 text-warning fs-4"></i>
+                                0414 660 676<br>0704 343 621<br>0781 540 122
+                            </li>
+                            <li class="mb-4">
+                                <i class="bi bi-envelope-fill me-3 text-warning fs-4"></i>
+                                info@spu.ac.ug
+                            </li>
+                            <li class="mb-4">
+                                <i class="bi bi-whatsapp me-3 text-warning fs-4" style="color: #25D366 !important;"></i>
+                                <a href="https://wa.me/256704343621" target="_blank" style="color: var(--dark); text-decoration: none;">0704 343 621 (WhatsApp)</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-geo-alt-fill me-3 text-warning fs-4"></i>
+                                P.O. Box 16301, Kampala, Uganda
+                            </li>
+                        </ul>
+
+                        <h5 class="mt-5">Our Campuses</h5>
+                        <p class="mt-3"><strong>Luwero Main Campus</strong><br>Ndejje school zone, Kisooba village</p>
+                        <p class="mt-3"><strong>Kanyanya Campus</strong><br>Gayaza Road – approx. 4 miles from Kampala centre</p>
+
+                        <!-- WhatsApp Contact Card -->
+                        <div class="mt-5 p-4 bg-white rounded shadow-sm">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-whatsapp text-success me-2"></i>Quick WhatsApp Support</h5>
+                            <p class="mb-3">Get instant responses to your inquiries via WhatsApp</p>
+                            <a href="https://wa.me/256704343621?text=Hello%20St%20Peter's%20University%2C%20I%20need%20assistance%20with%3A"
+                               class="btn btn-whatsapp w-100 py-3"
+                               target="_blank">
+                                <i class="bi bi-whatsapp me-2"></i>Start WhatsApp Chat
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <h4>Send us a message</h4>
+                        <form class="mt-4 p-4 bg-white rounded shadow-sm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-lg" rows="5" placeholder="Your message..." required></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-gold btn-lg px-5">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Now with Dark Blue Color -->
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row">
+                <!-- University Info -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">St Peter's University</h5>
+                    <p class="mb-2">P.O. Box 16301, Kampala, Uganda</p>
+                    <p class="mb-2">Luwero Main Campus: Ndejje school zone, Kisooba village</p>
+                    <p class="mb-2">Kanyanya Campus: Gayaza Road – approx. 4 miles from Kampala centre</p>
+                    <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>0414 660 676 | 0704 343 621 | 0781 540 122</p>
+                    <p class="mb-1"><i class="bi bi-whatsapp me-2" style="color: #25D366;"></i> <a href="https://wa.me/256704343621" target="_blank" style="color: white; text-decoration: none;">0704 343 621 (WhatsApp)</a></p>
+                    <p><i class="bi bi-envelope-fill me-2"></i>info@spu.ac.ug</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about-us" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="#research" class="text-white text-decoration-none">Research</a></li>
+                        <li><a href="#media" class="text-white text-decoration-none">Media</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="https://spu.ac.ug/" target="_blank" class="text-white text-decoration-none">Official Website</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Follow Us</h5>
+                    <div class="social-icons mb-4">
+                        <a href="https://www.facebook.com/p/St-Peters-University-Uganda-100095275381153" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://wa.me/256704343621" target="_blank" style="color: #25D366;"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@spu.tv" target="_blank"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/UC9QFg5DzgLjSNUXPEbKQZUA" target="_blank"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-light opacity-25">
+
+            <p class="mb-2">© 2025–2026 St Peter's University. All Rights Reserved.</p>
+            <small class="text-muted">NCHE Accredited | Committed to Excellence, Innovation & Inclusivity</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Smooth scroll behavior for all internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Carousel initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.getElementById('heroCarousel');
+            if (myCarousel) {
+                var carousel = new bootstrap.Carousel(myCarousel, {
+                    interval: 5000,
+                    wrap: true,
+                    pause: false
+                });
+            }
+        });
+
+        // Program card selection
+        document.querySelectorAll('.program-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+
+        // WhatsApp tooltip auto-hide after 10 seconds
+        setTimeout(function() {
+            var tooltip = document.getElementById('whatsappTooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        }, 10000);
+
+        // Countdown to Graduation (March 15, 2026)
+        function updateCountdown() {
+            const graduationDate = new Date('March 15, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = graduationDate - now;
+
+            if (distance < 0) {
+                document.getElementById('graduationCountdown').innerHTML = 'HAPPENING NOW!';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('graduationCountdown').innerHTML = 
+                days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Handle image errors for local files
+        document.querySelectorAll('img[src*="C:\\Users"]').forEach(img => {
+            img.onerror = function() {
+                this.style.display = 'none';
+                const fallbackIcon = document.createElement('i');
+                fallbackIcon.className = 'bi bi-image';
+                fallbackIcon.style.fontSize = '3rem';
+                fallbackIcon.style.color = 'white';
+                this.parentElement.appendChild(fallbackIcon);
+                this.parentElement.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            };
+        });
+
+        // ============= SEARCH FUNCTIONALITY =============
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const searchModal = document.getElementById('searchModal');
+            const searchResults = document.getElementById('searchResults');
+            
+            // Search database - all content from the website
+            const searchDatabase = [
+                // Programs/Faculties
+                { title: "Bachelor of Business Administration", category: "Program", url: "#about-us", keywords: "bba business administration management accounting finance marketing", snippet: "3 years program at Luwero Campus" },
+                { title: "Bachelor of Education", category: "Program", url: "#about-us", keywords: "education teaching bachelor primary secondary", snippet: "3 years program at Luwero Campus" },
+                { title: "Bachelor of Information Technology", category: "Program", url: "#about-us", keywords: "it information technology computer programming", snippet: "3 years program at Kanyanya Campus" },
+                { title: "Diploma in Nursing", category: "Program", url: "#about-us", keywords: "nursing health sciences diploma medical", snippet: "2 years program at Luwero Campus" },
+                { title: "Diploma in Business Studies", category: "Program", url: "#about-us", keywords: "business studies diploma management", snippet: "2 years program at Both Campuses" },
+                { title: "Certificate in Computer Science", category: "Program", url: "#about-us", keywords: "computer science certificate programming it", snippet: "1 year program at Kanyanya Campus" },
+                { title: "Faculty of Health Sciences", category: "Faculty", url: "#about-us", keywords: "health sciences nursing medicine health", snippet: "Diploma in Nursing, Certificate in Health Assistance, Community Health" },
+                { title: "Vocational: Automotive", category: "Program", url: "#about-us", keywords: "automotive engineering motor vehicle mechanics", snippet: "Certificate in Automotive Engineering at Luwero Campus" },
+                { title: "Vocational: Electrical", category: "Program", url: "#about-us", keywords: "electrical installation solar electronics", snippet: "Certificate in Electrical Installation at Kanyanya Campus" },
+                { title: "Vocational: Building & Construction", category: "Program", url: "#about-us", keywords: "building construction bricklaying plumbing", snippet: "Certificate in Bricklaying at Luwero Campus" },
+                { title: "Vocational: Fashion & Design", category: "Program", url: "#about-us", keywords: "fashion design tailoring textile", snippet: "Certificate in Tailoring at Kanyanya Campus" },
+                { title: "Vocational: Catering & Hospitality", category: "Program", url: "#about-us", keywords: "catering hospitality food baking", snippet: "Certificate in Food Preparation at Luwero Campus" },
+                
+                // Leadership
+                { title: "Chancellor - Rt. Rev. Dr. Johnson Twinomujuni", category: "Leadership", url: "#about-us", keywords: "chancellor johnson twinomujuni leader", snippet: "Providing quality education that transforms lives and communities." },
+                { title: "Vice Chancellor - Dr. Dorothy Businge Kakongoro Kabugo", category: "Leadership", url: "#about-us", keywords: "vice chancellor dorothy businge kakongoro kabugo", snippet: "Appointed to lead with vision, integrity and a commitment to academic excellence." },
+                { title: "Dean of Students - Lukundo", category: "Leadership", url: "#about-us", keywords: "dean students lukundo student affairs", snippet: "Creating a supportive and inclusive community where every student can thrive." },
+                { title: "Dean Faculty of Education - Mr. Okeke Michael", category: "Leadership", url: "#about-us", keywords: "dean education okeke michael", snippet: "Shaping the next generation of educators who will transform Uganda's education sector." },
+                
+                // Admissions
+                { title: "Admissions - Direct Entry", category: "Admissions", url: "#services", keywords: "admissions direct entry uce uace requirements", snippet: "UCE ≥ 5 passes, UACE ≥ 2 principal passes" },
+                { title: "Admissions - Diploma Holders", category: "Admissions", url: "#services", keywords: "admissions diploma holders mature entry", snippet: "Relevant credit/second-class diploma + mature entry exam (≥50%)" },
+                { title: "Admissions - Mature Age", category: "Admissions", url: "#services", keywords: "admissions mature age nche", snippet: "≥ 25 years + pass NCHE Mature Age Examination" },
+                { title: "Online Application Form", category: "Admissions", url: "#admission-form", keywords: "apply application form online admissions", snippet: "Fill in your details to begin your journey at St Peter's University" },
+                
+                // Events
+                { title: "Fourth Graduation Ceremony 2026", category: "Event", url: "#events", keywords: "graduation ceremony 2026 fourth", snippet: "March 15, 2026 at Luwero Main Campus Auditorium" },
+                { title: "Freshman Orientation Week", category: "Event", url: "#events", keywords: "orientation freshman new students", snippet: "January 10-17, 2026 at Both Campuses" },
+                { title: "Annual Research Symposium 2026", category: "Event", url: "#events", keywords: "research symposium academic conference", snippet: "February 5-6, 2026 at Luwero Campus" },
+                { title: "SPU Career Fair 2026", category: "Event", url: "#events", keywords: "career fair jobs internships", snippet: "March 5, 2026 at Kanyanya Campus" },
+                { title: "Inter-Campus Sports Gala", category: "Event", url: "#events", keywords: "sports gala football basketball athletics", snippet: "April 20-22, 2026 at Luwero Sports Grounds" },
+                { title: "University Open Day", category: "Event", url: "#events", keywords: "open day prospective students tours", snippet: "May 15, 2026 at Both Campuses" },
+                { title: "Unity Cultural Festival", category: "Event", url: "#events", keywords: "cultural festival music dance diversity", snippet: "June 12-14, 2026 at Kanyanya Campus Grounds" },
+                
+                // FAQs
+                { title: "FAQ: What programs are offered?", category: "FAQ", url: "#faqs", keywords: "faq programs courses offered", snippet: "Business, Education, IT, Health Sciences, Vocational Studies" },
+                { title: "FAQ: How to apply for admission?", category: "FAQ", url: "#faqs", keywords: "faq apply admission application", snippet: "Apply online through our official website or contact admissions office" },
+                { title: "FAQ: Campus locations", category: "FAQ", url: "#faqs", keywords: "faq campus location where luwero kanyanya", snippet: "Luwero Main Campus and Kanyanya Campus" },
+                { title: "FAQ: Contact information", category: "FAQ", url: "#faqs", keywords: "faq contact phone email whatsapp", snippet: "0414 660 676, 0704 343 621, info@spu.ac.ug" },
+                { title: "FAQ: ICT services", category: "FAQ", url: "#faqs", keywords: "faq ict services wifi elearning", snippet: "Email, hardware support, Wi-Fi, E-Learning portal" },
+                { title: "FAQ: Program durations", category: "FAQ", url: "#faqs", keywords: "faq duration how long programs", snippet: "Bachelor's: 3-4 years, Diploma: 2 years, Certificate: 1 year" },
+                { title: "FAQ: Student support services", category: "FAQ", url: "#faqs", keywords: "faq student support counseling career", snippet: "Academic advising, career counseling, mental health support" },
+                { title: "FAQ: Internships", category: "FAQ", url: "#faqs", keywords: "faq internships practical training", snippet: "Many programs include internships or practical training" },
+                { title: "FAQ: Research opportunities", category: "FAQ", url: "#faqs", keywords: "faq research grants funding", snippet: "Research funding, faculty-led projects, student research" },
+                { title: "FAQ: International students", category: "FAQ", url: "#faqs", keywords: "faq international students visa support", snippet: "Orientation, visa assistance, accommodation support" },
+                
+                // Research
+                { title: "Research Centers", category: "Research", url: "#research", keywords: "research centers innovation", snippet: "Multiple research centers focused on solving local and global challenges" },
+                { title: "Publications", category: "Research", url: "#research", keywords: "publications journals papers", snippet: "Faculty and students publish in peer-reviewed journals" },
+                { title: "Grants & Funding", category: "Research", url: "#research", keywords: "grants funding research money", snippet: "Research funding opportunities for faculty and students" },
+                { title: "Collaborations", category: "Research", url: "#research", keywords: "collaborations partnerships international", snippet: "Partnerships with international institutions" },
+                
+                // Media
+                { title: "Campus Gallery", category: "Media", url: "#media", keywords: "gallery photos campus pictures", snippet: "Photos of Luwero and Kanyanya campuses" },
+                { title: "Graduation Photos", category: "Media", url: "#media", keywords: "graduation photos pictures ceremony", snippet: "Photos from the Fourth Graduation Ceremony" },
+                { title: "University Introduction Video", category: "Media", url: "#media", keywords: "video introduction youtube", snippet: "Watch our university introduction video" },
+                { title: "TikTok Campus Life", category: "Media", url: "#media", keywords: "tiktok campus life videos", snippet: "Follow @spu.tv on TikTok" },
+                
+                // Notices
+                { title: "Notice: Registration – Continuing Students", category: "Notice", url: "#services", keywords: "notice registration continuing students", snippet: "Posted: March 15, 2026" },
+                { title: "Notice: Tuition Payment Deadline", category: "Notice", url: "#services", keywords: "notice tuition payment deadline", snippet: "Posted: March 15, 2026" },
+                { title: "Notice: Admission Letters", category: "Notice", url: "#services", keywords: "notice admission letters", snippet: "Posted: August 5, 2024" },
+                
+                // Contact
+                { title: "Contact Information", category: "Contact", url: "#contact", keywords: "contact phone email whatsapp", snippet: "0414 660 676, 0704 343 621, info@spu.ac.ug" },
+                { title: "Luwero Main Campus", category: "Campus", url: "#contact", keywords: "luwero campus main location", snippet: "Ndejje school zone, Kisooba village" },
+                { title: "Kanyanya Campus", category: "Campus", url: "#contact", keywords: "kanyanya campus kampala location", snippet: "Gayaza Road – approx. 4 miles from Kampala centre" },
+                { title: "WhatsApp Support", category: "Contact", url: "#contact", keywords: "whatsapp support chat", snippet: "Get instant responses via WhatsApp at 0704 343 621" }
+            ];
+            
+            function performSearch(query) {
+                if (!query || query.trim() === '') {
+                    searchResults.innerHTML = `
+                        <div class="no-results">
+                            <i class="bi bi-binoculars fs-1 d-block mb-3"></i>
+                            <p>Type something to search for programs, events, FAQs, and more...</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                query = query.toLowerCase().trim();
+                const terms = query.split(' ').filter(term => term.length > 1);
+                
+                const results = searchDatabase.filter(item => {
+                    const searchableText = (item.title + ' ' + item.category + ' ' + item.keywords + ' ' + item.snippet).toLowerCase();
+                    
+                    // Check if all search terms are found in the item
+                    return terms.every(term => searchableText.includes(term)) || 
+                           searchableText.includes(query);
+                });
+                
+                if (results.length === 0) {
+                    searchResults.innerHTML = `
+                        <div class="no-results">
+                            <i class="bi bi-emoji-frown fs-1 d-block mb-3"></i>
+                            <p>No results found for "${query}"</p>
+                            <small class="text-muted">Try different keywords or browse our sections above</small>
+                        </div>
+                    `;
+                } else {
+                    let resultsHTML = '<div class="search-results-list">';
+                    results.slice(0, 8).forEach(result => { // Limit to 8 results
+                        // Highlight matching terms
+                        let highlightedTitle = result.title;
+                        let highlightedSnippet = result.snippet;
+                        
+                        terms.forEach(term => {
+                            const regex = new RegExp(`(${term})`, 'gi');
+                            highlightedTitle = highlightedTitle.replace(regex, '<span class="search-highlight">$1</span>');
+                            highlightedSnippet = highlightedSnippet.replace(regex, '<span class="search-highlight">$1</span>');
+                        });
+                        
+                        resultsHTML += `
+                            <div class="search-result-item" data-url="${result.url}">
+                                <a href="${result.url}">
+                                    <div class="search-result-category">${result.category}</div>
+                                    <div class="search-result-title">${highlightedTitle}</div>
+                                    <div class="search-result-snippet">${highlightedSnippet}</div>
+                                </a>
+                            </div>
+                        `;
+                    });
+                    
+                    if (results.length > 8) {
+                        resultsHTML += `
+                            <div class="text-center p-3 border-top">
+                                <small class="text-muted">Showing 8 of ${results.length} results. Refine your search for more specific results.</small>
+                            </div>
+                        `;
+                    }
+                    
+                    resultsHTML += '</div>';
+                    searchResults.innerHTML = resultsHTML;
+                    
+                    // Add click handlers to result items
+                    document.querySelectorAll('.search-result-item').forEach(item => {
+                        item.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const url = this.dataset.url;
+                            const targetElement = document.querySelector(url);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                                searchModal.classList.remove('show');
+                                searchInput.value = '';
+                            }
+                        });
+                    });
+                }
+            }
+            
+            // Show/hide search modal
+            searchInput.addEventListener('focus', function() {
+                searchModal.classList.add('show');
+            });
+            
+            // Close modal when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && !searchModal.contains(e.target)) {
+                    searchModal.classList.remove('show');
+                }
+            });
+            
+            // Search on input
+            searchInput.addEventListener('input', function() {
+                performSearch(this.value);
+            });
+            
+            // Search on button click
+            searchButton.addEventListener('click', function() {
+                performSearch(searchInput.value);
+            });
+            
+            // Search on Enter key
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    performSearch(this.value);
+                }
+            });
+            
+            // Prevent modal from closing when clicking inside it
+            searchModal.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            
+            // Initial empty state
+            performSearch('');
+        });
+    </script>
+</body>
+</html>
